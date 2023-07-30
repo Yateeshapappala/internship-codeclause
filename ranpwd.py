@@ -21,17 +21,17 @@ def generate():
                 password+=''.join(random.choice(a))
             paswd.set(password)
     else:
-        messagebox.showwarning("Invalid input","Please enter length to generate the password")
+        messagebox.showerror("Invalid input","Please enter length to generate the password")
 def resetpwd():
      leng.set("")
      paswd.set("")  
 
 def acceptpwd():
-     ans=paswd.get()
-     if ans != "" and ans!="Invalid input":
+     p=paswd.get()
+     if p != "" and p!="Invalid input":
           r.destroy()
      else:
-        messagebox.showwarning("Invalid Input","Please generate the password first")
+        messagebox.showerror("Invalid Input","Please generate the password first")
 
 def validate_input(input):
     if input.isdigit():
@@ -39,7 +39,7 @@ def validate_input(input):
     elif input=="":
         return True
     else:
-        messagebox.showwarning("Invalid Input","Please enter only numeric value")
+        messagebox.showerror("Invalid Input","Please enter only numeric value")
         
         return False
     
